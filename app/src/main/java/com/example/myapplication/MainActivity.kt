@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         val one = NumberButton(findViewById<Button>(R.id.num1), expression)
         val two = NumberButton(findViewById<Button>(R.id.num2), expression)
 
-        val plus = OperatorButton(findViewById<Button>(R.id.oprPlus), expression)
+        val plus = OperatorButton(findViewById<Button>(R.id.oprPlus), expression, Plus())
+        val minus = OperatorButton(findViewById<Button>(R.id.oprMinus), expression, Minus())
     }
 }

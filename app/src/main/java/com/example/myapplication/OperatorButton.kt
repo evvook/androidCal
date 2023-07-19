@@ -3,9 +3,12 @@ package com.example.myapplication
 import android.widget.Button
 
 class OperatorButton {
-    constructor(btn: Button, expression:Expression){
+    constructor(btn: Button, expression:Expression, operator:Operator){
+        this.operator = operator
+
         btn.setOnClickListener {
-            expression.setOperator(btn.text)
+            expression.setOperator(this.operator)
         }
     }
+    private val operator:Operator
 }
