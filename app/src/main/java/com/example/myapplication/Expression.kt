@@ -30,11 +30,15 @@ class Expression {
     }
 
     fun setOperator(operator: Operator){
-        if(this.operator == null){
-            this.operator = operator
-        }else {
-            calculate()
-            this.operator = operator
+        if(first.print()==""){
+            return
+        }else{
+            if(this.operator == null){
+                this.operator = operator
+            }else {
+                calculate()
+                this.operator = operator
+            }
         }
         print()
     }
